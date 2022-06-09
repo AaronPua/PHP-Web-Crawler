@@ -148,9 +148,9 @@ class CrawlerService
     public function getPageContent(string $url): array
     {
         $options = [
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => 5,
+            CURLOPT_URL => $url, // The URL to fetch content.
+            CURLOPT_RETURNTRANSFER => true, // Return HTML as string.
+            CURLOPT_TIMEOUT => 5, // Max number of seconds for cURL functions to execute.
         ];
 
         $startTime = microtime(true);
@@ -221,7 +221,7 @@ class CrawlerService
         $dom->loadHTML($html);
         libxml_clear_errors(); // Clear internal error buffer to free up memory.
 
-        $xpath = new DOMXPath($dom); // XPath object to parse HTML.
+        $xpath = new DOMXPath($dom);
 
         $scriptTags = $xpath->query('//script'); // Look for <script> tags.
         $styleTags = $xpath->query('//style');   // Look for <style> tags.
