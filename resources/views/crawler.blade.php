@@ -113,8 +113,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mt-2 ml-4 text-center text-sm text-gray-900 sm:text-right sm:ml-0">
+                        {{ __('crawler.versions.laravel_version', [ 'version' => Illuminate\Foundation\Application::VERSION ]) }} 
+                        {{ __('crawler.versions.php_version', [ 'version' => PHP_VERSION ]) }}
+                    </div>
                 @else
                     <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+                    <div class="mt-2 ml-4 text-center text-sm text-gray-900 sm:text-right sm:ml-0">
+                        {{ __('crawler.versions.laravel_version', [ 'version' => Illuminate\Foundation\Application::VERSION ]) }} 
+                        {{ __('crawler.versions.php_version', [ 'version' => PHP_VERSION ]) }}
+                    </div>
                 @endif
             </div>
 

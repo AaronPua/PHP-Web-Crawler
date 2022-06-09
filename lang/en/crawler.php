@@ -40,4 +40,9 @@ return [
             'title_length' => 'Average Title Length',
         ],
     ],
+
+    'versions' => [
+        'laravel_version' => 'Laravel :version',
+        'php_version' => '(PHP :version)',
+    ],
 ];
