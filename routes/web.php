@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('crawler');
-});
+Route::get('/', [CrawlerController::class, 'index']);
 
 Route::post('/', [CrawlerController::class, 'startPageCrawl'])->name('crawler.post');

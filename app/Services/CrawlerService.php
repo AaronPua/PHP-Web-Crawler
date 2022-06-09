@@ -91,7 +91,7 @@ class CrawlerService
                 'wordCount' => $this->average($this->crawledPages, 'wordCount')
             ],
             'unique' => [
-                'pages' => count($this->crawledPages),
+                'crawledPages' => count($this->crawledPages),
                 'images' => count($this->uniqueImages),
                 'internalLinks' => count($this->internalLinks),
                 'externalLinks' => count($this->externalLinks),
@@ -375,6 +375,6 @@ class CrawlerService
         if($column)
             return $this->average(array_column($array, $column));
 
-        return array_sum($array) / count($array);
+        return round(array_sum($array) / count($array), 2);
     }
 }

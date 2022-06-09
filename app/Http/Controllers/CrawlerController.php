@@ -22,6 +22,16 @@ class CrawlerController extends Controller
     }
 
     /**
+     * Index view for the crawler. 
+     *
+     * @return View
+     */
+    public function index(): View
+    {
+        return view('crawler', [ 'crawlResults' => '' ]);
+    }
+
+    /**
      * Start the process of crawling a specified number of pages.
      *
      * @param Request $request
@@ -44,6 +54,6 @@ class CrawlerController extends Controller
 
         $crawlResults = $this->crawlerService->getCrawlResults();
         
-        return view('crawler', [ 'crawlResults' => $crawlResults ]);
+        return view('crawler', [ 'crawlResults' => collect($crawlResults) ]);
     }
 }
