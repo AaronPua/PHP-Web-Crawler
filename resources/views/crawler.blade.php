@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>PHP Web Crawler</title>
+        <title>{{ __('crawler.page_title') }}</title>
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -13,7 +13,7 @@
     <header class="bg-white shadow">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold text-gray-900">
-                <a href="/">PHP Web Crawler</a>
+                <a href="/">{{ __('crawler.header_title') }}</a>
             </h1>
         </div>
     </header>
@@ -28,13 +28,13 @@
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <div class="grid grid-cols-6 gap-6">
                                 <div class="col-span-6 sm:col-span-3">
-                                    <label for="first-name" class="block text-sm font-medium text-gray-700">Website</label>
+                                    <label for="first-name" class="block text-sm font-medium text-gray-700">{{ __('crawler.form.website') }}</label>
                                     <input required type="text" id="starting_url" name="starting_url" placeholder="https://duckduckgo.com"
                                         class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3">
-                                    <label for="num_to_crawl" class="block text-sm font-medium text-gray-700">Pages to Crawl</label>
+                                    <label for="num_to_crawl" class="block text-sm font-medium text-gray-700">{{ __('crawler.form.num_to_crawl') }}</label>
                                     <select required type="text" id="num_to_crawl" name="num_to_crawl" 
                                         class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                                     @for ($i = 1; $i <= 6; $i++)
@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Start</button>
+                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">{{ __('crawler.form.button_start') }}</button>
                         </div>
                     </div>
                 </form>
@@ -61,13 +61,13 @@
                                     <table class="w-full">
                                         <thead>
                                             <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-200 border-b border-gray-600">
-                                                <th class="px-4 py-3">Pages Crawled</th>
-                                                <th class="px-4 py-3">Unique Images</th>
-                                                <th class="px-4 py-3">Unique Internal Links</th>
-                                                <th class="px-4 py-3">Unique External Links</th>
-                                                <th class="px-4 py-3">Average Page Load (seconds)</th>
-                                                <th class="px-4 py-3">Average Word Count</th>
-                                                <th class="px-4 py-3">Average Title Length</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.unique.pages_crawled') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.unique.images') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.unique.internal_links') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.unique.external_links') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.average.page_load') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.average.word_count') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.average.title_length') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white">
@@ -92,10 +92,10 @@
                                     <table class="w-full">
                                         <thead>
                                             <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-200 border-b border-gray-600">
-                                                <th class="px-4 py-3">Page</th>
-                                                <th class="px-4 py-3">HTTP Status Code</th>
-                                                <th class="px-4 py-3">Word Count</th>
-                                                <th class="px-4 py-3">Title Length</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.crawled_pages.page') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.crawled_pages.http_code') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.crawled_pages.word_count') }}</th>
+                                                <th class="px-4 py-3">{{ __('crawler.results.crawled_pages.title_length') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white">
