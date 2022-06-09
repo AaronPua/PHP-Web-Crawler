@@ -26,7 +26,7 @@ Using PHP, build a web crawler to display information about a given website.
 - Bonus: Use of a framework such as Laravel or Phalcon
 
 # Deployment
-The app has been deployed to a Heroku server: https://afternoon-hamlet-64717.herokuapp.com/
+The app has been deployed to a Heroku server: https://afternoon-hamlet-64717.herokuapp.com
 
 # Environment Setup
 ### Install via Composer
@@ -75,4 +75,4 @@ http://localhost:8000
 - The front-end of the app is built with the help of [TailwindCSS](https://tailwindcss.com/).
 - The back-end of the app utilized the concept of `Service Classes` to decouple business logic from the controller. Find out more:
   - https://farhan.dev/tutorial/laravel-service-classes-explained/#service-classes-to-the-rescue
-  - https://blackdeerdev.com/laravel-services-pattern/
+  - https://blackdeerdev.com/laravel-services-pattern
